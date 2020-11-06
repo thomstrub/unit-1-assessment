@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    
+}
+
+@media screen and (max-width: 660px) {
+    #header{
+    justify-content: center;
+    text-align: center;
+    }
+
+    .container {
+        margin: 0 10px 0 10px;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;   
+    font-family: karla, 'Open Sans', sans-serif;
+}
+
+.container {
+    margin-top: calc(20px + 5vh);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        ". header ."
+        ". answer ."
+        ". app ."
+        "footer footer footer";
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    grid-area: header;
+    flex-wrap: wrap;
+}
+
+
+
+h1{
+    box-shadow: 1px 3px 3px 5px #3E4146;
+    padding:0 4px;
+}
+
+#answer{
+    grid-area: answer;
+    margin-top: 10vh;
+    border-radius: .25rem;
+    padding: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 8vh;
+}
+
+#input {
+    grid-area: app;
+    border-radius: .25rem;
+    padding: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    
+    
+}
+
+input {
+    border: 4px solid grey;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 40px;
+    width: 20vh;
+}
+
+button {
+    width: 10vw;
+    height: 10vw;
+    background-color: #3E4146;
+    color: white;
+    font-size: 6vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    background-color: #b2bac7;
+}
+
+.negative {
+    color: red;
+}
+
+.positive {
+    color: black;
+}
